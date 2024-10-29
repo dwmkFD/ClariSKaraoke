@@ -21,9 +21,8 @@
                                 <MudForm>
                                     <MudRadioGroup @bind-Value="SelectedModel">
                                         <MudGrid Spacing="3" Justify="Justify.Center">
-                                            <MudItem lg="1" />
                                             <MudItem lg="3">
-                                                <MudRadio Value="0" Size="Size.Small">全機種</MudRadio>
+                                                <MudRadio Value="3" Size="Size.Small">全機種(未実装)</MudRadio>
                                             </MudItem>
                                             <MudItem lg="3">
                                                 <MudRadio Value="1" Size="Size.Small">JOYSOUND</MudRadio>
@@ -31,7 +30,9 @@
                                             <MudItem lg="3">
                                                 <MudRadio Value="2" Size="Size.Small">DAM</MudRadio>
                                             </MudItem>
-                                            <MudItem lg="2" />
+                                            <MudItem lg="3">
+                                                <MudButton OnClick="OnClickSelectSong" Variant="Variant.Filled" FullWidth="true">選曲</MudButton>
+                                            </MudItem>
                                         </MudGrid>
                                     </MudRadioGroup>
                                 </MudForm>
@@ -40,11 +41,51 @@
                     </MudItem>
                 </MudGrid>
 
+                <MudSimpleTable>
+                    <thead>
+                        <tr>
+                            @foreach( var h in headings )
+                            {
+                                <th>@h</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach( var row in list )
+                        {
+                            <tr>
+                                <td>@row.Item2</td>
+                                <td>@row.Item1.Title</td>
+                                <td>@row.Item1.Number[SelectedModel]</td>
+                            </tr>
+                        }
+                    </tbody>
+                </MudSimpleTable>
             </MudMainContent>
         </MudLayout>
     </main>
 </div>
 
 @code {
-    private int SelectedModel = 0;
+    private int SelectedModel = 1;
+
+    ClariSKaraoke.Shared.Models.SongDataManager manager = new ClariSKaraoke.Shared.Models.SongDataManager();
+    List<Tuple<ClariSKaraoke.Shared.Models.SongData, int>> list = new List<Tuple<ClariSKaraoke.Shared.Models.SongData, int>>();
+    private int counter = 0;
+
+    string[] headings = { "曲数", "タイトル", "選曲番号" };
+
+    private void OnClickSelectSong()
+    {
+        ++counter;
+        list.Add( new ( manager.GetSongDataRandom(SelectedModel), counter ) );
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        manager.ResetIndex();
+        counter = 0;
+    }
 }
