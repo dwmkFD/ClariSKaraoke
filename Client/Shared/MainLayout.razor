@@ -10,10 +10,33 @@
         <MudLayout>
             <MudMainContent Class="pt-16 px-16">
 
-                <MudGrid Spacing="2" Justify="Justify.Center">
-                    <MudItem lg="12" xs="12"><MudSpacer></MudSpacer></MudItem>
-                    <MudItem lg="12" xs="12" Style="background-color:lightpink">
-                        <MudText Typo="Typo.h6">ClariSオフ向け ランダム選曲システム</MudText>
+                <MudGrid>
+                    <MudItem lg="12">
+                        <MudGrid Spacing="4" Justify="Justify.Center">
+                            <MudItem lg="12" Style="background-color:lightpink">
+                                <MudText Typo="Typo.h6">ClariSオフ向け ランダム選曲システム</MudText>
+                            </MudItem>
+
+                            <MudItem lg="12">
+                                <MudForm>
+                                    <MudRadioGroup @bind-Value="SelectedModel">
+                                        <MudGrid Spacing="3" Justify="Justify.Center">
+                                            <MudItem lg="1" />
+                                            <MudItem lg="3">
+                                                <MudRadio Value="0" Size="Size.Small">全機種</MudRadio>
+                                            </MudItem>
+                                            <MudItem lg="3">
+                                                <MudRadio Value="1" Size="Size.Small">JOYSOUND</MudRadio>
+                                            </MudItem>
+                                            <MudItem lg="3">
+                                                <MudRadio Value="2" Size="Size.Small">DAM</MudRadio>
+                                            </MudItem>
+                                            <MudItem lg="2" />
+                                        </MudGrid>
+                                    </MudRadioGroup>
+                                </MudForm>
+                            </MudItem>
+                        </MudGrid>
                     </MudItem>
                 </MudGrid>
 
@@ -23,5 +46,5 @@
 </div>
 
 @code {
-
+    private int SelectedModel = 0;
 }
