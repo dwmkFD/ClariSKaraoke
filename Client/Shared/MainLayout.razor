@@ -1,17 +1,27 @@
 ﻿@inherits LayoutComponentBase
 
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <main>
+        <MudLayout>
+            <MudMainContent Class="pt-16 px-16">
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
+                <MudGrid Spacing="2" Justify="Justify.Center">
+                    <MudItem lg="12" xs="12"><MudSpacer></MudSpacer></MudItem>
+                    <MudItem lg="12" xs="12" Style="background-color:lightpink">
+                        <MudText Typo="Typo.h6">ClariSオフ向け ランダム選曲システム</MudText>
+                    </MudItem>
+                </MudGrid>
 
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
+            </MudMainContent>
+        </MudLayout>
+    </main>
 </div>
+
+@code {
+
+}
