@@ -46,7 +46,7 @@
                     </MudItem>
                 </MudGrid>
 
-                <MudSimpleTable>
+                <MudSimpleTable FixedHeader="true" Style="height:700px">
                     <thead>
                         <tr>
                             @foreach( var h in headings )
@@ -79,6 +79,7 @@
     ClariSKaraoke.Shared.Models.SongDataManager manager = new ClariSKaraoke.Shared.Models.SongDataManager();
     List<Tuple<ClariSKaraoke.Shared.Models.SongData, int>> list = new List<Tuple<ClariSKaraoke.Shared.Models.SongData, int>>();
     private int counter = 0;
+
 
     string[] headings = { "曲数", "タイトル", "選曲番号" };
 
