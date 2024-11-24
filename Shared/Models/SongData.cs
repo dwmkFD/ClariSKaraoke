@@ -89,6 +89,7 @@ namespace ClariSKaraoke.Shared.Models
             SongList.Add(new SongData("Dreamin'", 3, "106279", "4733-12"));
             SongList.Add(new SongData("DROP", 2, "", "4739-28"));
             SongList.Add(new SongData("eternally", 3, "726248", "4733-51"));
+            SongList.Add( new SongData( "Evergreen", 1, "631916", "" ) );
             SongList.Add(new SongData("Fairy Party", 3, "435186", "4739-19"));
             SongList.Add(new SongData("Fight!!", 3, "488834", "4739-16"));
             SongList.Add(new SongData("flowery", 3, "148627", "4733-05"));
