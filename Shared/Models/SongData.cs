@@ -177,6 +177,7 @@ namespace ClariSKaraoke.Shared.Models
             SongList.Add(new SongData("メモリー", 3, "148629", "4733-30"));
             SongList.Add(new SongData("ユニゾン", 1, "447883", ""));
             SongList.Add(new SongData("ルミナス", 3, "32226", "4733-44"));
+            SongList.Add( new SongData( "秋のグラディエント", 1, "632449", "" ) );
             SongList.Add(new SongData("仮面ジュブナイル", 2, "", "4739-22"));
             SongList.Add(new SongData("泣かないよ", 3, "199451", "4733-43"));
             SongList.Add(new SongData("桜咲く", 3, "314068", "4733-80"));
