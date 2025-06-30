@@ -189,6 +189,7 @@ namespace ClariSKaraoke.Shared.Models
             SongList.Add(new SongData("眠り姫", 3, "428865", "4733-72"));
             SongList.Add(new SongData("陽だまり", 3, "435164", "4739-20"));
             SongList.Add(new SongData("恋磁石", 3, "148623", "4733-17"));
+            SongList.Add( new SongData( "未来航路", 2, "", "1035-94" ) );
             SongList.Add(new SongData("メドレー1", 3, "148400", "4647-62"));
             SongList.Add(new SongData("メドレー2", 1, "314271", ""));
 
