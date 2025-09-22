@@ -108,6 +108,7 @@ namespace ClariSKaraoke.Shared.Models
             SongList.Add(new SongData("Neo Moon", 3, "109614", "4733-25"));
             SongList.Add(new SongData("next to you", 3, "736237", "4733-67"));
             SongList.Add(new SongData("nexus", 3, "29063", "3065-65"));
+            SongList.Add( new SongData( "One more voice", 1, "640522", "" ) );
             SongList.Add(new SongData("Orange", 3, "431844", "4733-82"));
             SongList.Add(new SongData("pastel", 3, "424821", "4733-97"));
             SongList.Add(new SongData("Pieces", 3, "733315", "4733-61"));
@@ -130,7 +131,8 @@ namespace ClariSKaraoke.Shared.Models
             SongList.Add(new SongData("TRAVEL", 1, "435160", ""));
             SongList.Add(new SongData("treasure", 3, "148626", "4733-20"));
             SongList.Add(new SongData("Twinkle Twinkle", 2, "", "4739-24"));
-            SongList.Add(new SongData("Wake Up", 3, "199137", "4733-34"));
+            SongList.Add( new SongData( "Umitsuki", 3, "639723", "1183-22"));
+            SongList.Add( new SongData( "Wake Up", 3, "199137", "4733-34" ) );
             SongList.Add(new SongData("with you", 3, "726247", "4733-50"));
             SongList.Add(new SongData("YUMENOKI", 3, "431743", "4739-27"));
             SongList.Add(new SongData("zutto", 3, "148625", "4733-40"));
@@ -178,6 +180,7 @@ namespace ClariSKaraoke.Shared.Models
             SongList.Add(new SongData("ユニゾン", 1, "447883", ""));
             SongList.Add(new SongData("ルミナス", 3, "32226", "4733-44"));
             SongList.Add( new SongData( "秋のグラディエント", 1, "632449", "" ) );
+            SongList.Add( new SongData( "運命", 1, "640521", "" ) );
             SongList.Add(new SongData("仮面ジュブナイル", 2, "", "4739-22"));
             SongList.Add(new SongData("泣かないよ", 3, "199451", "4733-43"));
             SongList.Add(new SongData("桜咲く", 3, "314068", "4733-80"));
